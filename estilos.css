@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+    background: #232323;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    color: #fff;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header Styles */
+header {
+    background: #3336ff;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 2.5em;
+}
+
+header .subtitle {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+/* Navigation Styles */
+nav {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styles */
+main section {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+main section:last-child {
+    border-bottom: none;
+}
+
+main h2 {
+    
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #33adff;
+}
+
+.experience-item, .education-item {
+    margin-bottom: 20px;
+}
+
+.experience-item h3, .education-item h3 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.role, .degree {
+    font-style: italic;
+    color: #555;
+}
+
+.skills-list {
+    
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.skills-list li {
+    
+    display: inline-block;
+    margin: 0 10px;
+    background: #3336ff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+#contact{
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
