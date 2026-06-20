@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Prediction System</title>
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<aside class="sidebar">
+        <div class="sidebar-inner">
+
+            <div class="profile">
+                <div class="avatar">JIG</div>
+                <h1 class="profile-name">Juan Iglesias González</h1>
+                <p class="profile-role">AI Engineer | Full-Stack & Mobile Developer</p>
+                
+                
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#about" class="nav-item">
+                    <span class="nav-icon">01</span>
+                    <span>Sobre mí</span>
+                </a>
+                <a href="#experience" class="nav-item">
+                    <span class="nav-icon">02</span>
+                    <span>Experiencia</span>
+                </a>
+                <a href="#projects" class="nav-item">
+                    <span class="nav-icon">03</span>
+                    <span>Proyectos</span>
+                </a>
+                <a href="#education" class="nav-item">
+                    <span class="nav-icon">04</span>
+                    <span>Titulación</span>
+                </a>
+                <a href="#skills" class="nav-item">
+                    <span class="nav-icon">05</span>
+                    <span>Habilidades</span>
+                </a>
+                <a href="#contact" class="nav-item">
+                    <span class="nav-icon">06</span>
+                    <span>Contacto</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-contact">
+                <a href="mailto:jniglesias14@gmail.com" class="sc-link">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+                    jniglesias14@gmail.com
+                </a>
+                <a href="https://github.com/jniglesias14" target="_blank" class="sc-link">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    github.com/jniglesias14
+                </a>
+                <a href="https://www.linkedin.com/in/juaniglesiasgonzalez" target="_blank" class="sc-link">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    juaniglesiasgonzalez
+                </a>
+            </div>
+
+            <a href="curriculum.pdf" download class="download-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar CV
+            </a>
+
+        </div>
+    </aside>
+
+<main class="main-content">
+
+<section class="section">
+
+    <a href="index.html#projects" class="back-btn" title="Volver a proyectos">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg> 
+    </a>
+    <br>
+
+    <h1 class="section-title">
+        Simulación y predicción de la temporada de Fórmula 1 mediante Machine Learning
+    </h1>
+
+    <h3>🔹 Descripción</h3>
+    <br>
+    <p>
+    Sistema de machine learning diseñado para simular y predecir el rendimiento de pilotos y equipos en una temporada completa de Fórmula 1.
+    </p>
+
+    <br>
+    <p>
+    El proyecto utiliza datos históricos de telemetría, tiempos por vuelta, degradación de neumáticos, stint length y características aerodinámicas de coche y circuito para predecir el rendimiento a nivel de vuelta individual.
+    </p>
+
+    <br>
+
+    <p>
+    A diferencia de un modelo estático, el sistema implementa una simulación dinámica vuelta a vuelta, incorporando evolución del piloto durante la carrera, desgaste de neumáticos, adaptación al coche y variabilidad estocástica.
+    </p>
+
+    <br>
+
+    <p>
+    El objetivo es replicar de forma realista el comportamiento de una carrera completa y extenderlo a una temporada completa de Fórmula 1.
+    </p>
+
+    <br>
+
+    <h3>🧩 Roles dentro del proyecto</h3>
+    <br>
+
+    <div class="role-block">
+        <h4>Ingeniería de datos</h4>
+        <ul>
+            <li>Procesamiento de datasets de telemetría, vueltas y resultados de F1</li>
+            <li>Limpieza de tiempos de vuelta y conversión a formato numérico</li>
+            <li>Integración de múltiples temporadas en un dataset unificado</li>
+        </ul>
+    </div>
+
+    <div class="role-block">
+        <h4>Feature Engineering</h4>
+        <ul>
+            <li>Cálculo de rendimiento histórico por piloto y equipo</li>
+            <li>Rolling pace y consistencia del piloto</li>
+            <li>Modelado de degradación de neumáticos por stint</li>
+            <li>Feature de edad de neumático (stint_age)</li>
+            <li>Factor aerodinámico combinado coche–circuito</li>
+            <li>Penalización por rendimiento del coche (car_penalty)</li>
+        </ul>
+    </div>
+
+    <div class="role-block">
+        <h4>Modelado de Machine Learning</h4>
+        <ul>
+            <li>Entrenamiento de modelo XGBoost Regressor</li>
+            <li>Predicción de tiempo por vuelta (LapTime)</li>
+            <li>Validación con MAE (Mean Absolute Error)</li>
+            <li>Optimización de hiperparámetros del modelo</li>
+        </ul>
+    </div>
+
+    <div class="role-block">
+        <h4>Simulación de carrera y temporada</h4>
+        <ul>
+            <li>Simulación vuelta a vuelta con actualización de estado del piloto</li>
+            <li>Modelo de degradación progresiva de neumáticos</li>
+            <li>Penalización por adaptación (rookies y cambios de equipo)</li>
+            <li>Actualización dinámica de posiciones por vuelta</li>
+            <li>Extensión a simulación completa de temporada</li>
+        </ul>
+    </div>
+
+    <div class="role-block">
+        <h4>Visualización</h4>
+        <ul>
+            <li>Evolución de posiciones vuelta a vuelta</li>
+            <li>Gráficas de tiempos por vuelta por piloto</li>
+            <li>Comparación simulación vs realidad</li>
+            <li>Comparación entre pilotos</li>
+            <li>Análisis de rendimiento por stint y consistencia</li>
+        </ul>
+    </div>
+<br>
+
+    <h3>⚙️ Arquitectura del sistema</h3>
+    <br>
+
+    <img src="imagenes/arquitectura_TFM.png" alt="Arquitectura F1 ML System" class="project-image">
+
+    <br>
+
+    <h3>🖥️ Tecnologías</h3>
+    <br>
+
+    <div class="tech-tags">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Pandas</span>
+        <span class="tech-tag">NumPy</span>
+        <span class="tech-tag">XGBoost</span>
+        <span class="tech-tag">Scikit-learn</span>
+        <span class="tech-tag">Matplotlib</span>
+        <span class="tech-tag">Machine Learning</span>
+        <span class="tech-tag">Data Analysis</span>
+    </div>
+
+    <br>
+
+    <h3>🚀 Funcionalidades</h3>
+    <br>
+
+    <div class="role-block">
+        <ul>
+            <li>Predicción de tiempos por vuelta (LapTime)</li>
+            <li>Simulación completa de carreras vuelta a vuelta</li>
+            <li>Modelo dinámico de degradación de neumáticos</li>
+            <li>Penalización por adaptación a coche (rookies y cambios de equipo)</li>
+            <li>Actualización de estado del piloto en carrera (rolling pace, stint age)</li>
+            <li>Cálculo de posiciones en tiempo real</li>
+            <li>Simulación de temporada completa de F1</li>
+            <li>Comparación entre simulación y datos reales</li>
+        </ul>
+    </div>
+
+    <br>
+
+    <h3>📸 Resultados / Imágenes</h3>
+    <br>
+
+    
+
+        <img src="imagenes/campeonato_2025_simulado.png" 
+            alt="Campeonato 2025 simulado" 
+            class="project-image">
+
+        <img src="imagenes/campeonato_2025_real.png" 
+            alt="Campeonato 2025 real" 
+            class="project-image">
+
+
+    <br>
+
+    <img src="imagenes/Bahrain_Grand_Prix_positions_2025.png" 
+        alt="Simulacion Bahrein" 
+        class="project-image">
+    <br>
+    <img src="imagenes/grafico_vueltas_leclerc_bahrein.png" 
+        alt="Simulacion Bahrein" 
+        class="project-image">
+    <br>
+    <img src="imagenes/grafico_vueltas_alonso_vs_stroll_bahrein.png" 
+        alt="Simulacion Bahrein" 
+        class="project-image">
+    <br>
+    
+
+</section>
+
+</main>
+
+</body>
+</html>
