@@ -752,11 +752,14 @@ body {
     :root { --sidebar-w: 0px; }
 
     .sidebar {
-        display: none;
+        display: flex;   /* en vez de none */
+        position: fixed;
+        width: 220px;    /* opcional: más estrecha */
+        z-index: 1000;
     }
 
     .main-content {
-        margin-left: 0;
+        margin-left: 220px;
     }
 
     .section {
