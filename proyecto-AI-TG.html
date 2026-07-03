@@ -97,15 +97,31 @@
 
         <h3>🔹 Descripción</h3>
         <br>
+
         <p>
-            Sistema conversacional inteligente desarrollado para la automatización de consultas y gestión de pedidos en entorno empresarial. El asistente permite a los usuarios visualizar, descargar, enviar y consultar información sobre pedidos mediante lenguaje natural.
+        ERP Order Assistant Intelligence es una plataforma conversacional inteligente desarrollada para automatizar la interacción con el ERP de la empresa mediante lenguaje natural.
+        Permite consultar, visualizar, descargar y enviar documentos, así como realizar análisis sobre la información empresarial y generar predicciones utilizando inteligencia artificial.
         </p>
-        <br>
-        <p>El sistema incorpora modelos de inteligencia artificial desarrollados y entrenados específicamente para el proyecto, incluyendo detección de intención (intent recognition), extracción de entidades (NER) y análisis de contexto conversacional. Estos modelos se integran con una arquitectura backend modular encargada de gestionar estados, historial y flujos multi-step.</p>
-        <br>
-        <p>Además, el sistema implementa lógica de negocio para interactuar con servicios internos, APIs y generación de documentos, permitiendo automatizar procesos reales dentro de la empresa.</p>
 
         <br>
+
+        <p>
+        La solución combina modelos de IA desarrollados específicamente para el proyecto (clasificación de intención, reconocimiento de entidades y análisis de contexto conversacional) con agentes basados en Large Language Models (LLMs) capaces de ejecutar tareas complejas mediante herramientas (Tool Calling).
+        </p>
+
+        <br>
+
+        <p>
+        La arquitectura se basa en una orquestación híbrida donde cada dominio (operaciones, análisis, predicciones y conversación general) dispone de su propio flujo de decisión, contexto y lógica de negocio, permitiendo mantener conversaciones multi-step, ejecutar procesos asíncronos y ofrecer respuestas adaptadas al estado de cada usuario.
+        </p>
+
+        <br>
+
+        <p>
+        Todo el sistema ha sido diseñado e implementado desde cero, incluyendo backend, modelos de IA, APIs, integración con el ERP, sistema conversacional, trazabilidad y monitorización.
+        </p>
+        <br>
+
         <h3>🧩 Roles dentro del proyecto</h3>
         <br>
         <div class="role-block">
@@ -122,6 +138,8 @@
                 <li>Implementación completa en PHP (CodeIgniter)</li>
                 <li>Desarrollo de endpoints, lógica de negocio y orquestación del sistema</li>
                 <li>Integración con APIs externas y servicios internos</li>
+                <li>Procesamiento asíncrono de agentes IA.</li>
+                <li>Sistema de publicación de estados en tiempo real.</li>
             </ul>
         </div>
 
@@ -131,6 +149,7 @@
                 <li>Entrenamiento de modelos de clasificación de intención (Intent Recognition)</li>
                 <li>Implementación de modelos de Named Entity Recognition (NER)</li>
                 <li>Desarrollo de modelo de detección de contexto conversacional</li>
+                <li>Integración de agentes LLM con Tool Calling para ejecución de tareas complejas.</li>
                 <li>Evaluación y ajuste de modelos</li>
             </ul>
         </div>
@@ -147,9 +166,15 @@
         <div class="role-block">
             <h4>Motor conversacional</h4>
             <ul>
-                <li>Orquestación de intenciones hacia controladores específicos</li>
-                <li>Gestión de estados</li>
-                <li>Manejo de procesos multi-step y continuidad conversacional</li>
+                <li>Orquestación inteligente entre dominios.</li>
+
+                <li>Gestión independiente del contexto por dominio.</li>
+
+                <li>Procesos multi-step con recuperación de estado.</li>
+
+                <li>Resolución automática de herramientas mediante agentes IA.</li>
+
+                <li>Persistencia del historial conversacional.</li>
             </ul>
         </div>
 
@@ -181,23 +206,109 @@
                 <li>Sistema de reset de procesos y recuperación de estado</li>
             </ul>
         </div>
+
+        <div class="role-block">
+
+            <h4>Analítica y Predicción</h4>
+
+            <ul>
+
+                <li>Predicción del número de pedidos mediante modelos Machine Learning.</li>
+
+                <li>Generación automática de gráficos interactivos.</li>
+
+                <li>Agente de análisis capaz de responder preguntas sobre datos empresariales.</li>
+
+                <li>Interpretación automática de resultados mediante IA.</li>
+
+            </ul>
+
+        </div>
+
+        <div class="role-block">
+
+            <h4>Monitorización y Trazabilidad</h4>
+
+            <ul>
+
+                <li>Sistema completo de trazabilidad de cada conversación.</li>
+
+                <li>Registro de decisiones tomadas por los modelos IA.</li>
+
+                <li>Dashboard de métricas del sistema.</li>
+
+                <li>Análisis de errores, dominios e interacciones.</li>
+
+            </ul>
+
+        </div>
     
         <br>
         <h3>⚙️ Arquitectura</h3>
         <br>
-        <img src="arquitectura_AI_TG.png" alt="Arquitectura del sistema" class="project-image">
+        <img src="arquitectura_final_ai_tg.png" alt="Arquitectura del sistema" class="project-image">
+        <br>
+
+        <h3>🧠 Arquitectura Inteligente</h3>
+
+        <br>
+        
+        <p>
+
+        La solución está estructurada mediante una arquitectura híbrida compuesta por varios dominios especializados:
+
+        </p>
+        <div class="role-block">
+        <ul>
+
+            <li><b>Operaciones:</b> ejecución de acciones sobre el ERP.</li>
+
+            <li><b>Predicciones:</b> modelos de Machine Learning para estimaciones futuras.</li>
+
+            <li><b>Análisis:</b> agente LLM con capacidad de Tool Calling.</li>
+
+            <li><b>Chat:</b> conversación general con respuestas inteligentes.</li>
+
+        </ul>
+
+        
+        </div>
+        <p>
+
+        Cada dominio dispone de su propio sistema de contexto, permitiendo conversaciones independientes y evitando interferencias entre distintos flujos conversacionales.
+
+        </p>
+
         <br>
 
         <h3>🖥️ Tecnologías</h3>
         <br>
         <div class="tech-tags">
+
             <span class="tech-tag">Python</span>
-            <span class="tech-tag">PHP</span>
+
             <span class="tech-tag">FastAPI</span>
-            <span class="tech-tag">MySQL</span>
-            <span class="tech-tag">ERP Integration</span>
-            <span class="tech-tag">Transformers (BERT)</span>
+
             <span class="tech-tag">PyTorch</span>
+
+            <span class="tech-tag">Transformers (BERT)</span>
+
+            <span class="tech-tag">LLMs</span>
+
+            <span class="tech-tag">Tool Calling</span>
+
+            <span class="tech-tag">PHP</span>
+
+            <span class="tech-tag">CodeIgniter 4</span>
+
+            <span class="tech-tag">MySQL</span>
+
+            <span class="tech-tag">REST APIs</span>
+
+            <span class="tech-tag">Chart.js</span>
+
+            <span class="tech-tag">ERP Integration</span>
+
         </div>
 
         <br>
@@ -206,40 +317,117 @@
         <div class="role-block">
             
             <ul>
-                <li>Gestión de pedidos por lenguaje natural</li>
-                <li>Consulta y descarga de pedidos</li>
-                <li>Extracción de entidades (NER)</li>
-                <li>Clasificación de intención</li>
+
+                <li>Consultas al ERP mediante lenguaje natural.</li>
+
+                <li>Visualización de pedidos.</li>
+
+                <li>Descarga de documentos.</li>
+
+                <li>Envío automático por correo electrónico.</li>
+
+                <li>Análisis estadístico mediante agentes IA.</li>
+
+                <li>Predicción del número de pedidos.</li>
+
+                <li>Interpretación automática de gráficos.</li>
+
+                <li>Conversaciones multi-step con mantenimiento de contexto.</li>
+
+                <li>Procesamiento asíncrono de tareas.</li>
+
+                <li>Dashboard de trazabilidad y monitorización.</li>
+
             </ul>
         </div>
 
-          <h3>📸 Resultados / Imágenes</h3>
 
-        <div style="display:flex; gap:20px; flex-wrap:wrap;">
-            <img src="imagen1.png"
-                alt="Resultado 1"
-                class="project-image"
-                style="width:48%; height:auto;">
+    <h3>📸 Galería del proyecto</h3>
 
-            <img src="imagen2.png"
-                alt="Resultado 2"
-                class="project-image"
-                style="width:48%; height:auto;">
+    <br>
 
-            <img src="imagen3.png"
-                alt="Resultado 3"
-                class="project-image"
-                style="width:48%; height:auto;">
+    <p>
+    A continuación se muestran algunas capturas del funcionamiento del sistema, incluyendo el asistente conversacional, el agente de análisis, el módulo de predicciones y el dashboard de trazabilidad desarrollado para monitorizar el comportamiento de la plataforma.
+    </p>
 
-            <img src="imagen4.png"
-                alt="Resultado 4"
-                class="project-image"
-                style="width:48%; height:auto;">
-            
-        </div>
+    <br>
+
+    <div class="gallery">
+
+        <figure class="gallery-item">
+            <img src="imagen1.png" alt="Asistente conversacional">
+            <figcaption>Dominio de predicciones.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="dashboard.png" alt="Agente IA">
+            <figcaption>Trazabilidad del sistema completo.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="agente_funcionando.png" alt="Predicciones">
+            <figcaption>Agente IA funcionando</figcaption>
+        </figure>
+
+        
+
+        <figure class="gallery-item">
+            <img src="mezcla_dominios.png" alt="Asistente conversacional">
+            <figcaption>Conversación multi-step entre varios dominios.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="imagen2.png" alt="Agente IA">
+            <figcaption>Contexto conversacional</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="imagen3.png" alt="Predicciones">
+            <figcaption>Conversación</figcaption>
+        </figure>
+
+
+
+        <figure class="gallery-item">
+            <img src="imagen4.png" alt="Dashboard">
+            <figcaption>Conversación entre dominios</figcaption>
+        </figure>
+
+    </div>
+   
+
+        
 
     </section>
-</main>
 
+</main>
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img">
+</div>
 </body>
 </html>
+
+<script>
+
+const lightbox=document.getElementById("lightbox");
+const lightboxImg=document.getElementById("lightbox-img");
+
+document.querySelectorAll(".gallery img").forEach(img=>{
+
+    img.onclick=function(){
+
+        lightbox.style.display="flex";
+        lightboxImg.src=this.src;
+
+    }
+
+});
+
+lightbox.onclick=function(){
+
+    lightbox.style.display="none";
+
+}
+
+</script>
