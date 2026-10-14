@@ -3,7 +3,7 @@ var p=window.PROJECTS[document.body.dataset.project];
 var root=document.getElementById("project-content");
 function esc(value){return String(value).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
 function list(items){return "<ul>"+items.map(function(item){return "<li>"+esc(item)+"</li>"}).join("")+"</ul>"}
-function imageSection(title,images){return "<h4>"+esc(title)+"</h4><div class=\"project-gallery\">"+images.map(function(image){return '<figure><img src="imagenes/'+esc(image[0])+'" alt="'+esc(image[1])+'" loading="lazy" decoding="async"><figcaption>'+esc(image[2])+"</figcaption></figure>"}).join("")+"</div>"}
+function imageSection(title,images){return "<h4>"+esc(title)+"</h4><div class=\"project-gallery\">"+images.map(function(image){return '<figure><img src="'+esc(image[0])+'" alt="'+esc(image[1])+'" loading="lazy" decoding="async"><figcaption>'+esc(image[2])+"</figcaption></figure>"}).join("")+"</div>"}
 if(!p||!root){console.error("No se pudo cargar el contenido del proyecto.");return}
 document.title=p.t+" — Juan Iglesias González";
 var content='<a class="back" href="index%20(2).html#proyectos">← Volver a proyectos</a><p class="eyebrow">'+esc(p.cat)+'</p><h1 class="serif">'+esc(p.t)+'</h1>';
