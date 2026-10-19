@@ -6,7 +6,7 @@ function list(items){return "<ul>"+items.map(function(item){return "<li>"+esc(it
 function imageSection(title,images){return "<h4>"+esc(title)+"</h4><div class=\"project-gallery\">"+images.map(function(image){return '<figure><img src="'+esc(image[0])+'" alt="'+esc(image[1])+'" loading="lazy" decoding="async"><figcaption>'+esc(image[2])+"</figcaption></figure>"}).join("")+"</div>"}
 if(!p||!root){console.error("No se pudo cargar el contenido del proyecto.");return}
 document.title=p.t+" — Juan Iglesias González";
-var content='<a class="back" href="index%20(2).html#proyectos">← Volver a proyectos</a><p class="eyebrow">'+esc(p.cat)+'</p><h1 class="serif">'+esc(p.t)+'</h1>';
+var content='<a class="back" href="index.html#proyectos">← Volver a proyectos</a><p class="eyebrow">'+esc(p.cat)+'</p><h1 class="serif">'+esc(p.t)+'</h1>';
 content+='<h4>Descripción</h4>'+p.d.map(function(item){return "<p>"+esc(item)+"</p>"}).join("");
 if(p.obj)content+="<h4>Objetivo del proyecto</h4>"+list(p.obj);
 if(p.roles)content+='<h4>Roles dentro del proyecto</h4>'+p.roles.map(function(role){return '<div class="rl"><b>'+esc(role[0])+"</b>"+list(role[1])+"</div>"}).join("");
