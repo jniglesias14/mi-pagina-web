@@ -16,13 +16,14 @@ var files={agent:"proyecto-ai-agent.html",erp:"proyecto-erp-order-assistant.html
 F.forEach(function(f){var p=P[f[0]];var b=document.createElement("a");b.className="card rev "+f[1];b.href=files[f[0]];
 b.innerHTML='<div class="bg" style="background:'+f[2]+'"></div><span class="cat">'+p.cat+'</span><h3 class="serif">'+p.t+'</h3><p>'+f[3]+'</p><div class="tags">'+tg(p.tech)+'</div><span class="more">'+f[4]+' →</span>';
 fe.appendChild(b)});
-var M=[["chat","NLP / AI","Support Chatbot","Motor conversacional de IA para clasificar intenciones, responder en tiempo real e integrarse con aplicaciones empresariales.","Python · FastAPI · PyTorch · BERT · PHP · MySQL"],
+var M=[["algoritmos","AI SYSTEM","Algoritmos Agénticos","Implementación de algoritmos agénticos (ReAct, Plan-and-Execute, Reflexion y Tree of Thoughts) con sus arquitecturas, en notebooks reproducibles.","Python · LangGraph · LLMs · Jupyter"],
+["chat","NLP / AI","Support Chatbot","Motor conversacional de IA para clasificar intenciones, responder en tiempo real e integrarse con aplicaciones empresariales.","Python · FastAPI · PyTorch · BERT · PHP · MySQL"],
 ["vacation","WEB","Vacation Management System","Plataforma para solicitudes, aprobaciones y planificación de vacaciones con control de disponibilidad e informes para RRHH.","PHP · CodeIgniter · MySQL · JavaScript"],
 ["tasks","WEB","Employee Task Management System","Sistema para asignar tareas, controlar prioridades y fechas límite y monitorizar el trabajo de equipos.","PHP · CodeIgniter · MySQL · ERP"],
 ["docs","WEB","Congress Documentation Management System","Gestión centralizada y segura de documentación, versiones, permisos y procesos de congresos y eventos.","PHP · CodeIgniter · MySQL"],
 ["mobile","MOBILE","Mobile Threat Analysis Platform","Aplicación Android para visualizar análisis de seguridad, comparar riesgos y procesar APKs.","Kotlin · Android SDK · APIs · MySQL"],
 ["importer","AUTOMATION","ERP Data Import Automation Platform","Automatización de cargas masivas de Excel a ERP con validación, transformación y trazabilidad.","PHP · CodeIgniter · Excel · ERP"]];
-var miniFiles={chat:"proyecto-support-chatbot.html",vacation:"proyecto-vacaciones.html",tasks:"proyecto-gestion-tareas.html",docs:"proyecto-gestion-documentacion.html",mobile:"proyecto-app-uva.html",importer:"proyecto-importador-erp.html"};
+var miniFiles={algoritmos:"proyecto-algoritmos-agenticos.html",chat:"proyecto-support-chatbot.html",vacation:"proyecto-vacaciones.html",tasks:"proyecto-gestion-tareas.html",docs:"proyecto-gestion-documentacion.html",mobile:"proyecto-app-uva.html",importer:"proyecto-importador-erp.html"};
 $("#mini").innerHTML=M.map(function(m){return '<a class="rev" href="'+miniFiles[m[0]]+'"><span class="cat">'+m[1]+'</span><h4>'+m[2]+'</h4><p>'+m[3]+'</p><p style="margin-top:10px;color:#c8c8c8">'+m[4]+'</p></a>'}).join("");
 
 // ---- diagramas animados ----
@@ -33,6 +34,7 @@ h+='<h4>Descripción</h4>'+p.d.map(function(x){return '<p>'+x+'</p>'}).join("");
 if(p.obj)h+='<h4>Objetivo del proyecto</h4>'+ul(p.obj);
 if(p.roles)h+='<h4>Roles dentro del proyecto</h4>'+p.roles.map(function(r){return '<div class="rl"><b>'+r[0]+'</b>'+ul(r[1])+'</div>'}).join("");
 if(p.arch)h+='<h4>Arquitectura</h4><p>'+p.arch+'</p>'+dg(k)+'<div class="flow">'+p.steps.map(function(s){return '<div><b>'+s[0]+'</b> — '+s[1]+'</div>'}).join("")+'</div>';
+if(p.diagrams)h+=p.diagrams.map(function(d){return '<h4>'+d[0]+'</h4>'+dg(d[1])+(d[2]?'<p><a href="'+d[2]+'" target="_blank" rel="noopener">Ver código en GitHub ↗</a></p>':'')}).join("");
 if(p.flow)h+='<h4>Flujo de ejecución</h4>'+ul(p.flow);
 h+='<h4>Tecnologías</h4><div class="tags" style="margin-top:0">'+tg(p.tech)+'</div>';
 if(p.fn)h+='<h4>Funcionalidades</h4>'+ul(p.fn);
