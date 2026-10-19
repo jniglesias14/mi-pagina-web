@@ -1,3 +1,7 @@
+// ⚠ Cambia SOLO esta línea por el nombre real de tu repositorio en GitHub:
+var ALG_REPO="https://github.com/jniglesias14/Agentic-algorithms/blob/main";
+
+var ALG=function(f){return ALG_REPO+"/"+f};
 var PROJECTS={
 agent:{t:"AI Agent Automation System",cat:"AI SYSTEM",
 d:["AI Agent Automation System es un sistema inteligente basado en Large Language Models (LLMs) diseñado para interpretar instrucciones en lenguaje natural, razonar sobre los objetivos solicitados y ejecutar acciones mediante herramientas externas.","El sistema utiliza una arquitectura basada en agentes de IA capaces de analizar una petición, determinar qué acciones son necesarias, seleccionar las herramientas adecuadas y ejecutar cada paso hasta alcanzar el objetivo solicitado por el usuario.","A diferencia de un chatbot tradicional basado únicamente en generación de texto, el agente puede interactuar con servicios externos, APIs y funciones específicas para ejecutar tareas reales.","El proyecto está diseñado como una arquitectura extensible en la que nuevas herramientas y capacidades pueden incorporarse sin modificar el núcleo principal del sistema."],
@@ -30,7 +34,41 @@ d:["Motor conversacional basado en inteligencia artificial diseñado para interp
 roles:[["Arquitectura del sistema",["Diseño de arquitectura distribuida (backend + servicios IA).","Separación de responsabilidades entre lógica, modelos y datos.","Definición de comunicación mediante APIs REST."]],["Desarrollo backend",["Implementación en PHP (CodeIgniter).","Gestión de peticiones, controladores y flujo conversacional.","Integración con servicios externos y APIs."]],["Desarrollo de modelos de IA",["Entrenamiento de modelo de clasificación de intenciones.","Implementación de matching semántico para FAQs.","Preprocesamiento y normalización de texto.","Evaluación y optimización del rendimiento."]],["Servicio de inferencia",["Despliegue de modelos mediante API en FastAPI.","Gestión de inferencias en tiempo real.","Optimización de latencia y consumo de recursos."]],["Motor conversacional",["Gestión de intents, respuestas y fallback.","Control del flujo conversacional y decisiones.","Sistema híbrido de reglas e IA."]],["Gestión de datos",["Diseño de estructuras de almacenamiento.","Persistencia de respuestas, FAQs y configuraciones."]],["Optimización",["Control de errores y fallback inteligente.","Thresholds de confianza para decisiones.","Optimización de inferencia en CPU/GPU."]]],
 tech:["Python","FastAPI","PyTorch","Transformers (BERT)","PHP","MySQL"],
 fn:["Clasificación automática de intención.","Matching semántico de FAQs.","Procesamiento de lenguaje natural.","Respuestas dinámicas basadas en contexto.","Integración con sistemas externos."],
-architectureImages:[["arquitectura_actualizada_chatbot_atencion.png","Arquitectura actualizada del chatbot","Arquitectura del motor conversacional para atención al cliente."]]}
+architectureImages:[["arquitectura_actualizada_chatbot_atencion.png","Arquitectura actualizada del chatbot","Arquitectura del motor conversacional para atención al cliente."]]},
+algoritmos:{
+cat:"AGENTES DE IA · INVESTIGACIÓN",
+t:"Algoritmos Agénticos",
+d:[
+"Proyecto de investigación y desarrollo donde implemento, desde cero y en cuadernos reproducibles, distintos algoritmos agénticos: patrones de razonamiento y control que permiten a un LLM planificar, actuar, evaluar y corregirse.",
+"Cada algoritmo vive en su propia carpeta con un notebook ejecutable y un README que explica la idea, su arquitectura y sus ventajas y límites, para poder compararlos con las mismas tareas."
+],
+obj:[
+"Implementar los principales patrones agénticos (ReAct, Plan-and-Execute, Reflexion, Tree of Thoughts).",
+"Comparar su calidad, coste y latencia sobre las mismas tareas.",
+"Servir como base reutilizable para los agentes de mis otros proyectos."
+],
+diagrams:[
+["01 · ReAct","react",ALG("react.py")],
+["02 · Plan-and-Execute","plan",ALG("plan_and_execute.py")],
+
+["03 · Tree of Thoughts","tot",ALG("tree_of_thoughts.py")]
+],
+flow:[
+"01-react: ciclo Thought → Action → Observation hasta resolver la tarea.",
+"02-plan-and-execute: un planner genera el plan y un executor lo ejecuta paso a paso, con replanificación.",
+"03-reflexion: el agente critica su resultado, guarda la reflexión en memoria y reintenta.",
+"04-tree-of-thoughts: explora varias ramas de razonamiento, las evalúa y poda las débiles."
+],
+tech:["Python","LLMs","Tool Calling","LangGraph","Jupyter Notebooks"],
+fn:[
+"Un notebook ejecutable por algoritmo.",
+"README con explicación y arquitectura de cada patrón.",
+"Herramientas y prompts compartidos para comparar resultados."
+],
+uses:["Agentes autónomos con herramientas","Resolución de problemas multi-paso","Razonamiento complejo con búsqueda"],
+ext:"Añadir un nuevo algoritmo es crear una carpeta con su notebook y README, y registrar su diagrama en el renderizador.",
+links:[["Repositorio completo en GitHub",ALG_REPO]]
+}
 };
 PROJECTS.rag.d=["RAG Document Assistant es una plataforma de búsqueda inteligente sobre documentación PDF desarrollada mediante una arquitectura Retrieval-Augmented Generation (RAG).","La aplicación permite consultar documentos utilizando lenguaje natural, mantiene el contexto entre preguntas y recupera información relevante desde una base vectorial antes de generar la respuesta mediante un Large Language Model.","Integra un flujo conversacional basado en LangGraph, ChromaDB, embeddings semánticos y una API REST desarrollada con FastAPI, preparada para integrarse con aplicaciones web y sistemas empresariales."];
 PROJECTS.rag.roles=[["Diseño de arquitectura del sistema",["Diseño completo de la arquitectura RAG.","Definición del flujo conversacional mediante LangGraph.","Gestión persistente del contexto conversacional."]],["Desarrollo backend",["Desarrollo completo mediante FastAPI.","Diseño de endpoints REST.","Gestión de subida y eliminación de documentos.","Reindexación automática de la base vectorial.","Gestión de memoria conversacional."]],["Procesamiento documental",["Carga automática de PDFs.","Extracción del contenido.","División inteligente en chunks.","Indexación mediante embeddings."]],["Base de datos vectorial",["Integración con ChromaDB.","Persistencia del índice vectorial.","Eliminación selectiva de embeddings.","Recuperación por similitud semántica."]],["Inteligencia artificial",["Integración de modelos LLM mediante Groq.","Reescritura automática de consultas.","Recuperación contextual de información.","Generación de respuestas basadas en la documentación."]],["Prompts y memoria",["Prompts especializados para reescritura y generación.","Restricciones para reducir alucinaciones.","Persistencia mediante MemorySaver.","Conversaciones independientes mediante Thread ID e historial contextual."]]];
