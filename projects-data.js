@@ -1,4 +1,4 @@
-// ⚠ Cambia SOLO esta línea por el nombre real de tu repositorio en GitHub:
+
 var ALG_REPO="https://github.com/jniglesias14/Agentic-algorithms/blob/main";
 
 var ALG=function(f){return ALG_REPO+"/"+f};
