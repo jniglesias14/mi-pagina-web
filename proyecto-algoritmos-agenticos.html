@@ -15,5 +15,15 @@
 <script src="projects-data.js"></script>
 <script src="project-diagram.js"></script>
 <script src="project-page.js"></script>
+  <script>
+addEventListener("load",function(){setTimeout(function(){
+  var p=window.PROJECTS&&PROJECTS[document.body.dataset.project];
+  var box=document.getElementById("project-content");
+  if(!p||!p.compare||!box||box.querySelector("[data-compare]"))return;
+  var c=p.compare;
+  var h='<div data-compare><h4>'+c.title+'</h4><div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:14px;min-width:760px"><thead><tr>'+c.cols.map(function(x){return '<th style="text-align:left;padding:10px;border-bottom:1px solid rgba(128,128,128,.4)">'+x+'</th>'}).join("")+'</tr></thead><tbody>'+c.rows.map(function(r){return '<tr>'+r.map(function(x,i){return '<td style="padding:10px;vertical-align:top;border-bottom:1px solid rgba(128,128,128,.2)'+(i===0?';font-weight:600;white-space:nowrap':'')+'">'+x+'</td>'}).join("")+'</tr>'}).join("")+'</tbody></table></div>'+(c.note?'<p style="opacity:.7;font-size:13px">'+c.note+'</p>':'')+'</div>';
+  box.insertAdjacentHTML("beforeend",h);
+},0)});
+</script>
 </body>
 </html>
