@@ -68,7 +68,18 @@ fn:[
 ],
 uses:["Agentes autónomos con herramientas","Resolución de problemas multi-paso","Razonamiento complejo con búsqueda","Gestión de datos con agentes especializados (lectura y escritura separadas)"],
 ext:"Añadir un nuevo algoritmo es crear una carpeta con su notebook y README, y registrar su diagrama en el renderizador.",
-links:[["Repositorio completo en GitHub",ALG_REPO]]
+links:[["Repositorio completo en GitHub",ALG_REPO]],
+compare:{
+title:"Comparativa y cuándo usar cada algoritmo",
+cols:["Algoritmo","Idea","Llamadas al LLM","Latencia","Úsalo cuando…","Evítalo cuando…"],
+rows:[
+["ReAct","Alterna razonar, actuar y observar en un bucle hasta resolver la tarea.","Medio-alto: una por iteración.","Media; crece con el número de pasos.","El siguiente paso depende del resultado anterior o el problema es exploratorio.","El proceso es largo y conocido de antemano: gasta llamadas y puede caer en bucles."],
+["Plan-and-Execute","Un planner genera el plan completo y un executor lo ejecuta paso a paso.","Bajo: planner + respuesta final (más si replanifica).","Baja-media.","El workflow tiene varios pasos y se puede definir casi entero antes de empezar.","No se sabe qué hacer hasta ver el resultado actual; un mal plan inicial arrastra errores."],
+["Tree of Thoughts","Genera varias ramas de razonamiento, las evalúa y poda las débiles.","Alto: generar y evaluar cada rama.","Alta.","Hay varias soluciones posibles y compensa comparar alternativas antes de decidir.","La tarea es simple o el coste y la latencia son críticos."],
+["Multi-Agent","Un router deriva cada petición a un agente especializado.","Variable: router + agente elegido.","Media.","Hay dominios distintos (lectura/escritura, consulta/conversación) con prompts, herramientas y permisos separados.","Una sola tarea sencilla basta; un router que se equivoca añade una llamada inútil."]
+],
+note:"Valores relativos según el diseño de cada patrón, no mediciones."
+}
 }
 };
 PROJECTS.rag.d=["RAG Document Assistant es una plataforma de búsqueda inteligente sobre documentación PDF desarrollada mediante una arquitectura Retrieval-Augmented Generation (RAG).","La aplicación permite consultar documentos utilizando lenguaje natural, mantiene el contexto entre preguntas y recupera información relevante desde una base vectorial antes de generar la respuesta mediante un Large Language Model.","Integra un flujo conversacional basado en LangGraph, ChromaDB, embeddings semánticos y una API REST desarrollada con FastAPI, preparada para integrarse con aplicaciones web y sistemas empresariales."];
