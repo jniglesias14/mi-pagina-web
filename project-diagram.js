@@ -20,12 +20,16 @@ N.push([340,y,110,t,1.6+i*.5]);E.push("M260 95C300 95 300 "+c+" 340 "+c);E.push(
 D.push(["M10 95H150C300 95 300 "+c+" 340 "+c+"H450C490 "+c+" 490 95 520 95H760",6,i*1.5])});
 D.push(["M575 117C575 235 205 235 205 117",3,1]);
 X='<text x="385" y="232" style="fill:#878787;font-size:12px">Si un paso falla o cambia el contexto, se replanifica</text>'}
-
 else if(k==="tot"){Hh=290;N=[[10,123,100,"Problema",0],[150,123,120,"Generador",.8],[470,123,120,"Evaluador",3.2],[640,123,120,"Mejor ruta",4.2]];E=["M110 145H150","M590 145H640"];
 ["Pensamiento A","Pensamiento B","Pensamiento C"].forEach(function(t,i){var y=20+i*103,c=y+22;
 N.push([310,y,120,t,1.6+i*.6]);E.push("M270 145C290 145 290 "+c+" 310 "+c);E.push("M430 "+c+"C455 "+c+" 455 145 470 145");
 D.push(["M10 145H150H270C290 145 290 "+c+" 310 "+c+"H430C455 "+c+" 455 145 470 145H760",6,i*1.5])});
 X='<text x="530" y="200" style="fill:#878787;font-size:12px">Poda de ramas débiles; se expande la mejor</text>'}
+else if(k==="multi"){Hh=290;N=[[10,128,100,"Usuario",0],[150,128,110,"Router",.8],[640,128,120,"Respuesta",4.2]];E=["M110 150H150"];
+["Planner ⇄ Tools","Agente SQL","Response"].forEach(function(t,i){var y=30+i*98,c=y+22;
+N.push([340,y,120,t,1.6+i*.6]);E.push("M260 150C300 150 300 "+c+" 340 "+c);E.push("M460 "+c+"C550 "+c+" 550 150 640 150");
+D.push(["M10 150H260C300 150 300 "+c+" 340 "+c+"H460C550 "+c+" 550 150 640 150H760",6,i*1.5])});
+X='<text x="400" y="18" style="fill:#878787;font-size:12px">El router elige un único agente; el planner repite tools hasta completar</text>'}
 else return "";
 var s='<svg class="dg" viewBox="0 0 '+W+" "+Hh+'" role="img" aria-label="Diagrama animado de la arquitectura">';
 E.forEach(function(d){s+='<path class="ln" d="'+d+'"/>'});
