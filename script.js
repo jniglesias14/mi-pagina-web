@@ -42,6 +42,7 @@ if(p.uses)h+='<h4>Casos de uso</h4>'+ul(p.uses);
 if(p.ext)h+='<h4>Arquitectura extensible</h4><p>'+p.ext+'</p>';
 if(p.gal)h+='<h4>Galería del proyecto</h4><p>Capturas del funcionamiento del sistema. Aquí irán tus imágenes reales.</p><div class="gal">'+p.gal.map(function(g){return '<div>'+g+'</div>'}).join("")+'</div>';
 if(p.links)h+='<h4>Proyecto</h4><ul>'+p.links.map(function(l){return '<li><a href="'+l[1]+'" target="_blank" rel="noopener">'+l[0]+' ↗</a></li>'}).join("")+'</ul>';
+if(p.compare){var c=p.compare;h+='<h4>'+c.title+'</h4><div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:14px;min-width:760px"><thead><tr>'+c.cols.map(function(x){return '<th style="text-align:left;padding:10px;border-bottom:1px solid rgba(128,128,128,.4)">'+x+'</th>'}).join("")+'</tr></thead><tbody>'+c.rows.map(function(r){return '<tr>'+r.map(function(x,i){return '<td style="padding:10px;vertical-align:top;border-bottom:1px solid rgba(128,128,128,.2)'+(i===0?';font-weight:600;white-space:nowrap':'')+'">'+x+'</td>'}).join("")+'</tr>'}).join("")+'</tbody></table></div>'+(c.note?'<p style="opacity:.7;font-size:13px">'+c.note+'</p>':'')}
 $("#dc").innerHTML=h;$("#dlg").showModal()}
 $("#dlg").addEventListener("click",function(e){if(e.target===this)this.close()});
 
