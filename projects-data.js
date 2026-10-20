@@ -43,29 +43,30 @@ d:[
 "Cada algoritmo vive en su propia carpeta con un notebook ejecutable y un README que explica la idea, su arquitectura y sus ventajas y límites, para poder compararlos con las mismas tareas."
 ],
 obj:[
-"Implementar los principales patrones agénticos (ReAct, Plan-and-Execute, Reflexion, Tree of Thoughts).",
+"Implementar los principales patrones agénticos (ReAct, Plan-and-Execute, Tree of Thoughts y Multi-Agent).",
 "Comparar su calidad, coste y latencia sobre las mismas tareas.",
 "Servir como base reutilizable para los agentes de mis otros proyectos."
 ],
 diagrams:[
 ["01 · ReAct","react",ALG("react.py")],
 ["02 · Plan-and-Execute","plan",ALG("plan_and_execute.py")],
-
-["03 · Tree of Thoughts","tot",ALG("tree_of_thoughts.py")]
+["03 · Tree of Thoughts","tot",ALG("tree_of_thoughts.py")],
+["04 · Multi-Agent (Router + agentes especializados)","multi",ALG("multi_agent.py")]
 ],
 flow:[
 "01-react: ciclo Thought → Action → Observation hasta resolver la tarea.",
 "02-plan-and-execute: un planner genera el plan y un executor lo ejecuta paso a paso, con replanificación.",
-"03-reflexion: el agente critica su resultado, guarda la reflexión en memoria y reintenta.",
-"04-tree-of-thoughts: explora varias ramas de razonamiento, las evalúa y poda las débiles."
+"03-tree-of-thoughts: explora varias ramas de razonamiento, las evalúa y poda las débiles.",
+"04-multi-agent: un router clasifica la petición y la deriva a un agente especializado (planner con tools para escribir, agente SQL de solo lectura o respuesta conversacional), con memoria por thread."
 ],
-tech:["Python","LLMs","Tool Calling","LangGraph","Jupyter Notebooks"],
+tech:["Python","LLMs","Tool Calling","LangGraph","FastAPI","SQLite","Jupyter Notebooks"],
 fn:[
 "Un notebook ejecutable por algoritmo.",
 "README con explicación y arquitectura de cada patrón.",
-"Herramientas y prompts compartidos para comparar resultados."
+"Herramientas y prompts compartidos para comparar resultados.",
+"Multi-Agent expuesto como API (FastAPI) con dashboard de métricas y trace de ejecución."
 ],
-uses:["Agentes autónomos con herramientas","Resolución de problemas multi-paso","Razonamiento complejo con búsqueda"],
+uses:["Agentes autónomos con herramientas","Resolución de problemas multi-paso","Razonamiento complejo con búsqueda","Gestión de datos con agentes especializados (lectura y escritura separadas)"],
 ext:"Añadir un nuevo algoritmo es crear una carpeta con su notebook y README, y registrar su diagrama en el renderizador.",
 links:[["Repositorio completo en GitHub",ALG_REPO]]
 }
