@@ -16,7 +16,7 @@ var files={agent:"proyecto-ai-agent.html",erp:"proyecto-erp-order-assistant.html
 F.forEach(function(f){var p=P[f[0]];var b=document.createElement("a");b.className="card rev "+f[1];b.href=files[f[0]];
 b.innerHTML='<div class="bg" style="background:'+f[2]+'"></div><span class="cat">'+p.cat+'</span><h3 class="serif">'+p.t+'</h3><p>'+f[3]+'</p><div class="tags">'+tg(p.tech)+'</div><span class="more">'+f[4]+' →</span>';
 fe.appendChild(b)});
-var M=[["algoritmos","AI SYSTEM","Algoritmos Agénticos","Implementación de algoritmos agénticos (ReAct, Plan-and-Execute, Reflexion y Tree of Thoughts) con sus arquitecturas, en notebooks reproducibles.","Python · LangGraph · LLMs · Jupyter"],
+var M=[["algoritmos","AI SYSTEM","Algoritmos Agénticos","Implementación de algoritmos agénticos (ReAct, Plan-and-Execute, Tree of Thoughts y Multi-Agent) con sus arquitecturas, en notebooks reproducibles.","Python · LangGraph · LLMs · FastAPI · Jupyter"],
 ["chat","NLP / AI","Support Chatbot","Motor conversacional de IA para clasificar intenciones, responder en tiempo real e integrarse con aplicaciones empresariales.","Python · FastAPI · PyTorch · BERT · PHP · MySQL"],
 ["vacation","WEB","Vacation Management System","Plataforma para solicitudes, aprobaciones y planificación de vacaciones con control de disponibilidad e informes para RRHH.","PHP · CodeIgniter · MySQL · JavaScript"],
 ["tasks","WEB","Employee Task Management System","Sistema para asignar tareas, controlar prioridades y fechas límite y monitorizar el trabajo de equipos.","PHP · CodeIgniter · MySQL · ERP"],
